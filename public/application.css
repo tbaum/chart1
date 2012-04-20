@@ -121,7 +121,7 @@ input[type="mobile"] {
   box-sizing: border-box;
 }
 textarea {
-  width: 220px;
+/* width: 220px; */
   margin: 0 2px 0 0;
   padding: 4px 8px;
   -webkit-box-sizing: border-box;
@@ -228,7 +228,7 @@ header#header h1 {
   -moz-box-orient: vertical;
   -moz-box-align: stretch;
 }
-#article .contacts {
+#article .charts {
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
   box-flex: 1;
@@ -241,7 +241,7 @@ header#header h1 {
   -moz-box-align: stretch;
   -moz-box-pack: start;
 }
-#article .contacts .sidebar {
+#article .charts .sidebar {
   width: 300px;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -250,7 +250,7 @@ header#header h1 {
   -moz-box-orient: vertical;
   -moz-box-align: stretch;
 }
-#article .contacts .sidebar header {
+#article .charts .sidebar header {
   padding: 6px 7px 5px 7px;
   border: 1px solid #c5c5c5;
   border-width: 1px 0 1px 0;
@@ -260,16 +260,17 @@ header#header h1 {
   background: -moz-linear-gradient(top, #fff, #dedfe0);
   background: linear-gradient(top, #fff, #dedfe0);
 }
-#article .contacts .sidebar header input {
+#article .charts .sidebar header input {
   font-size: 30px;
   width: 100%;
 }
-#article .contacts .sidebar .items {
+#article .charts .sidebar .items {
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
   box-flex: 1;
+  overflow-y: scroll;
 }
-#article .contacts .sidebar .item {
+#article .charts .sidebar .item {
   height: 50px;
   padding: 0 15px;
   line-height: 50px;
@@ -279,7 +280,7 @@ header#header h1 {
   overflow: hidden;
   white-space: nowrap;
 }
-#article .contacts .sidebar .item.active {
+#article .charts .sidebar .item.active {
   color: #fff;
   text-shadow: 0 -1px 1px #46677f;
   background: #7bb5db;
@@ -293,7 +294,7 @@ header#header h1 {
   -webkit-box-shadow: inset 0 2px 2px #4775b8;
   box-shadow: inset 0 2px 2px #4775b8;
 }
-#article .contacts .sidebar footer {
+#article .charts .sidebar footer {
   padding: 6px;
   border-top: 1px solid #c5c5c5;
   background: #fff;
@@ -305,7 +306,7 @@ header#header h1 {
   box-shadow: 0 -1px 2px rgba(0,0,0,0.10);
   text-align: right;
 }
-#article .contacts .main {
+#article .charts .main {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-box-align: stretch;
@@ -316,7 +317,7 @@ header#header h1 {
   -moz-box-flex: 1;
   box-flex: 1;
 }
-#article .contacts .main header {
+#article .charts .main header {
   color: #333;
   font-weight: bold;
   text-shadow: 0 1px 1px #fff;
@@ -331,7 +332,7 @@ header#header h1 {
   box-shadow: 1px 1px 2px rgba(0,0,0,0.10);
   overflow: hidden;
 }
-#article .contacts .main header a {
+#article .charts .main header a {
   float: left;
   line-height: 30px;
   height: 30px;
@@ -340,7 +341,7 @@ header#header h1 {
   border-right: 1px solid rgba(0,0,0,0.30);
   text-decoration: none;
 }
-#article .contacts .main header a:active {
+#article .charts .main header a:active {
   background: #dadada;
   -moz-box-shadow: inset 0 0 10px #9c9c9c;
   -webkit-box-shadow: inset 0 0 10px #9c9c9c;
@@ -348,7 +349,7 @@ header#header h1 {
   -webkit-box-shadow: inset 0 0 10px #9c9c9c;
   box-shadow: inset 0 0 10px #9c9c9c;
 }
-#article .contacts .main .content {
+#article .charts .main .content {
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
   box-flex: 1;
@@ -359,4 +360,26 @@ header#header h1 {
   box-shadow: inset 1px 2px 2px rgba(0,0,0,0.10);
   padding: 20px;
   -webkit-user-select: text;
+}
+#article .charts .main .content label {
+  padding-left: 5px;
+}
+#article .charts .main .content .error {
+  background-color: #fcc;
+}
+#article .charts .main .content input {
+  width: 600px;
+}
+#article .charts .main .content textarea {
+  width: 100%;
+  height: 120px;
+}
+#article .charts .main .content textarea.import {
+  width: 100%;
+  height: 500px;
+}
+#article .charts .main .content textarea.export {
+  background: #ddd;
+  height: 125px;
+  width: 100%;
 }

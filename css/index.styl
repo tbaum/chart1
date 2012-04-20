@@ -39,7 +39,7 @@ header#header h1
   box-flex(1)
   vbox()
 
-#article .contacts
+#article .charts
   box-flex(1)
   hbox()
   
@@ -57,7 +57,7 @@ header#header h1
       input
         font-size: 30px;
         width: 100%;    
-        
+
     .items
       box-flex(1)
       overflow-y: scroll
@@ -117,3 +117,26 @@ header#header h1
       inset-box-shadow(1px, 2px, 2px, rgba(0, 0, 0, 0.1))
       padding: 20px;
       -webkit-user-select: text;
+
+      label
+        padding-left:5px;
+
+      .error
+        background-color:#ffcccc;
+
+      input
+        width: 600px;
+
+      textarea
+        width: 100%;
+        height: 120px;
+
+      textarea.import
+        width: 100%;
+        height: 500px;
+
+      textarea.export
+        background:#dddddd;
+        height: 125px;
+        width: 100%;
+

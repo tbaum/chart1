@@ -1,0 +1,8 @@
+<header>
+  <a class="export">Export</a>
+</header>
+
+<div class="content">
+  <p><%= @exportData %></p>
+
+</div>

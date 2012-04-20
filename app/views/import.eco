@@ -1,0 +1,44 @@
+<header>
+  <a class="import">Import</a>
+</header>
+
+<div class="content">
+  <form>
+
+    <label>
+      <span>JSON-Data</span>
+      <textarea name="import" class="import">
+[
+    {
+        "name": "Read: Requests / Client",
+        "query": "select host_type,db,clients,results_client from 1MZAghiSbmIkKt9kDSAf_bMQh2Zg_7HfWN1iW-pU where op starts with 'read' order by clients",
+        "options": "{ \"hAxis\": { \"logScale\": true, \"title\": \"Clients\" } }"
+    },
+    {
+        "name": "Read: Average Time / Client",
+        "query": "select host_type,db,clients,avg from 1MZAghiSbmIkKt9kDSAf_bMQh2Zg_7HfWN1iW-pU where op starts with 'read' order by clients",
+        "options": "{ \"hAxis\": { \"logScale\": true, \"title\": \"Clients\" } }"
+    },
+    {
+        "name": "Write: Requests / Client",
+        "query": "select host_type,db,clients,results_client from 1MZAghiSbmIkKt9kDSAf_bMQh2Zg_7HfWN1iW-pU where op starts with 'write' order by clients",
+        "options": "{ \"hAxis\": { \"logScale\": true, \"title\": \"Clients\" } }"
+    },
+    {
+        "name": "Write: Average Time / Client",
+        "query": "select host_type,db,clients,avg from 1MZAghiSbmIkKt9kDSAf_bMQh2Zg_7HfWN1iW-pU where op starts with 'write' order by clients",
+        "options": "{ \"hAxis\": { \"logScale\": true, \"title\": \"Clients\" } }"
+    },
+    {
+        "name": "Read: Requests / Client (C1.XL only)",
+        "query": "select host_type,db,clients,results_client from 1MZAghiSbmIkKt9kDSAf_bMQh2Zg_7HfWN1iW-pU where host_type in ('ec2:c1.xl') AND op starts with 'read' order by clients",
+        "options": "{ \"hAxis\": { \"logScale\": true, \"title\": \"Clients\" } }"
+    }
+]
+</textarea>
+    </label>
+
+    <button>Start Import</button>
+
+  </form>
+</div>

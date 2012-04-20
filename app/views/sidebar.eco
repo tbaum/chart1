@@ -5,5 +5,7 @@
 <div class="items"></div>
 
 <footer>
-  <button>New Contact</button>
+  <button class="import">Import</button>
+  <button class="export">Export</button>
+  <button class="create">New Chart</button>
 </footer>

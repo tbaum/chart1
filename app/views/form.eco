@@ -7,14 +7,26 @@
   <form>
     <label>
       <span>Name</span>
-      <input type="text" name="name" value="<%= @name %>">
+      <input type="text" name="name" value="<%= @item.name %>">
     </label>
   
     <label>
-      <span>Email</span>
-      <input type="email" name="email" value="<%= @email %>">
-    </label>  
-    
+      <span>Query</span>
+      <textarea name="query"><%= @item.query %></textarea>
+    </label>
+
+    <label <%- "class='error'" if @error %>>
+      <span>Graph-Options</span>
+      <textarea name="options"><%= @item.options %></textarea>
+      <% if @error: %>
+        <span><%= @error %></span>
+      <% end %>
+    </label>
+
     <button>Save</button>
+
+    <hr/>
+
+    <textarea class="export" readonly="true"><%= @export %></textarea>
   </form>
 </div>
